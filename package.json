@@ -1,0 +1,66 @@
+{
+  "name": "dsh-plugin-canvas",
+  "version": "1.0.0",
+  "description": "无限画布插件仓库：把第三方插件拖入画布脱离全局、组装成组合、开启后重新加入全局响应。Infinite-canvas plugin warehouse: compose third-party plugins into activatable workflows.",
+  "type": "module",
+  "main": "lib/index.js",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "LICENSE",
+    "README.md",
+    "test-index.mjs",
+    "test-client.mjs"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "plugin-composer",
+    "canvas",
+    "workflow",
+    "infinite-canvas"
+  ],
+  "license": "MIT",
+  "author": "kkaporn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkaporn/dsh-session-composer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kkaporn/dsh-session-composer/issues"
+  },
+  "homepage": "https://github.com/kkaporn/dsh-session-composer#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.0-rc.2 <0.3.0-0",
+    "@deepseek-ai/cordis": "~4.0.4"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  }
+}

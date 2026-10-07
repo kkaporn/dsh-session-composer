@@ -1,0 +1,10 @@
+# dsh-plugin-canvas — 插件自己的装配层
+#
+# 本文件被 DSH 当作 bundle 层读取。只声明本插件自己的一行 entry。
+# 第三方插件的启停全部委托宿主 pluginManager（setBundleEnabled/setPluginEnabled），
+# 本插件不写任何 patch，不在这里声明任何其它插件。
+
+- insert:
+    - id: plugin-canvas
+      name: dsh-plugin-canvas
+      config: {}
